@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+
+body {
+    color: $main-text-color;
+    background-color: $main-bg-color;
+
+    font-size: $main-font-size;
+    font-family: $main-font-family;
+}
+
+.roku-header {
+   background-color: #336699AA;
+   padding: 0.75em 1.5em;
+   margin-bottom: 2em;
+
+   span { 
+        font-family: 'Vujahday Script', cursive;
+        font-size: 3.5em;
+        position: relative;
+        top: -2px;
+    }
+
+    nav {
+        ul{
+            display: flex;
+            font-size: 1.4em;
+            padding-top: 0.8em;
+
+            li{
+                margin-right: 0.35em;
+                cursor: pointer;
+
+                :hover {
+                    color: #FF6633;
+                }
+            }
+        }
+    }
+}
