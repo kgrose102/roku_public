@@ -1,0 +1,17 @@
+.users-headline { font-size:2em; margin-bottom: 1.5em; }
+
+.users-container { 
+    display: flex;
+    justify-content: center;
+
+    .user-panel { 
+        flex: 0 1 150px; 
+        border: 2px solid #FF6633;
+        border-radius: 0.5em;
+        margin: 0 1em;
+        background-color: #336699;
+        cursor: pointer;
+
+        img { margin-bottom: 0.75em; }
+    }
+}

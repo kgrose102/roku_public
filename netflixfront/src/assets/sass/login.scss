@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+
+.error { border: 4px solid red;}
+
+.login-flash{ margin-bottom: 1em;}
+
+.signup { margin-right: 0.7em;}
+
+.jumbotron { 
+    color: #fff;
+    background-color: #336699;
+
+    h1 { 
+        font-size: 2em; 
+        margin-bottom: 0.5em;
+        font-weight: bold; 
+    }
+
+    p { line-height: 1.5;}
+
+}
+
+.log-in {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+
+    input {
+        padding: 0 1em;
+        margin-bottom: 1.5em;
+        border-radius: 10px;
+        border: 2px solid  #FF6633;
+    }
+}
+
+.login-submit { 
+    font-family: 'Vujahday Script', cursive;
+    font-size: 2.25em;
+    padding: 0 0.7em; 
+}
+
+#logo-title{
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0,1fr));
+
+    #logo{
+        grid-column: 1;
+    }
+
+    #flash-back{
+        grid-column: 2;
+        font-size: 50px;
+        margin-top: 50px;
+        font-family: 'Vujahday Script', cursive;
+    }
+
+    .content-select{
+        padding: 10px;
+        width: 100px;
+        height: 50px;
+        margin-top: 50px;
+        margin-left: 20px;
+        border-radius: 15px;
+
+    }
+
+    nav{
+        grid-column: 9/-1;
+        margin-top: 50px;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    .jumbotron p {
+        width: 80%;
+    }
+}
