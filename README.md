@@ -14,33 +14,51 @@
 
 ## Required Components:
 
-- [Site Frontend](https://github.com/kgrose102/antonucci_rose_rokufront)
-- [Site Backend](https://github.com/kgrose102/antonucci_rose_rokuback)
-- [Api backend and Databases](https://github.com/kgrose102/antonucci_rose_api)
+- [Site Files](https://github.com/kgrose102/roku_public)
 - [Content Files](https://1drv.ms/u/s!ArZVsiqfft1BrtpvEfUB0xsDPu1hMQ?e=5BmBhY)
     - download the files and add each folder: video, audio, and shows into the assets directory.
 
-## To Run:
-- cd into antonucci_rose_api
-- update database name in .env file with the one in your MySQL
-- and update .env file with your mySQL Login information and Port
-- run 'php -S localhost:{port you are using} -t public'
-- make sure you have php as a command line path
-- in Vue update vue.config.js the following:
-    - const API_URL = "http://localhost:{port you are using}/Roku_flashback"
-    - const APIAUD_URL = "http://localhost:{port you are using}/audio"
-    - const APISHO_URL = "http://localhost:{port you are using}/shows"
+
+#### Databases:
+
+- open you SQL Database manager
+- create a new database named "users"
+- import the database 'users.sql' from roku_public/databases
+- Repeat for roku_public/databases/roku.sql with a database names 'roku'
+- if you change the name of the database you will need to update config files for API and NetflixBack.
 
 
-#### For Non Lumen API:
+#### Backend API configuration:
 
-- Add file to your htdocs (MAMP), or www (Wamp) folder.
-- Make sure it's an active path.
+- Add roku_api folder to your htdocs (MAMP), www (Wamp), or DDEV active directory.
 - then add the path into the Vue.config file of the Front end
 - use the following in vue.config.js
     - const API_URL = "http://roku-flashback/api/index.php"
     - const APIAUD_URL = "http://roku-flashback/api/indexAudio.php"
     - const APISHO_URL = "http://roku-flashback/api/indexShow.php"
+
+#### Login Verification:
+
+- open NetflixBack/config.js
+- edit 'username' and 'password' to match your login information for you SQL database manager.
+- If you set a different name for the Users database, Set 'database' name to match.
+
+#### Run Backend:
+
+- CD into NetflixBack
+- open a command or terminal window in folder
+- run the command "npm install"
+- use the command "npm start"
+- default SQL port is set to 3306
+    - navigate to Netfliback/route/index.js to change the SQL port
+
+## Run Frontend interface:
+
+- cd netflixfront
+- open a command or terminal window in folder
+- run the command "npm install"
+- use the command "npm run serve"
+- open localhost site
 
 ### This a dynamic Web Application that seamlessly works on Roku systems, web, and mobile
 
@@ -52,5 +70,4 @@ Movies, TV Shows, and music are the property and copyright of their respective o
 
 All rights reserved 2022©
 ReadMe vr. 2.0
-Application vr. public 1.0
-# roku_public
+Application vr. public 1.1
